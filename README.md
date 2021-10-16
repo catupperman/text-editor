@@ -37,6 +37,7 @@ Applications used to create the Fitness Tracker:
 > * [Express](https://www.npmjs.com/package/express)
 > * [Shields IO](https://shields.io/category/license) 
 > * [Open Source Initiative](https://opensource.org/licenses/BSD-3-Clause) 
+> * [Babel](https://webpack.js.org/loaders/babel-loader/)
 ## Contributions
 > My teacher, and TAs were a big help in explaining the process of describing WebPack and all the intriquecies of building a PWA (Progressive Web App).  My tutor, Corey Yates, went above and beyond this week to make sure I had sufficient understanding. This is a relatively new application development, and Corey investigated to make sure she could help me to the best of her ability.  
 ## Testing
