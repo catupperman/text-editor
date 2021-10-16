@@ -23,8 +23,8 @@ module.exports = () => {
         template: './index.html',
       }),
       new InjectManifest({
-        swSrc: 'src-sw.js',
-        swDest: 'src-sw.js'
+        swSrc: './src-sw.js',
+        swDest: './src-sw.js'
       }),
     ],
 
