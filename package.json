@@ -1,5 +1,5 @@
 {
-  "name": "JATE",
+  "name": "jate",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,7 +12,7 @@
     "client": ""
   },
   "keywords": [],
-  "author": "",
+  "author": "2U",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
