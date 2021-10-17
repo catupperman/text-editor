@@ -19,7 +19,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'jate',
+        title: 'JATE',
         template: './index.html',
       }),
       new InjectManifest({
@@ -27,11 +27,21 @@ module.exports = () => {
         swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest ({
+        fingerprints: false,
         inject: true,
-        name: 'jate', 
+        name: 'JATE', 
         description: 'text editor',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         start_url: '/',
-        publicPath: '/'
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       })
     ],
 
