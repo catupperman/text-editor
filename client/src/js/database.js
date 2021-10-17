@@ -25,7 +25,7 @@ export const putDb = async (id, content) => {
 };
 
 // TODO: Add logic for a method that gets all the content from the database
-export const putDb = async () => {
+export const getDb = async () => {
   console.error('getDB not implemented');
   console.log('get all DB')
   const allContent = await openDB('jate', 1);
