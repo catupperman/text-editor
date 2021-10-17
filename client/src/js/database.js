@@ -13,10 +13,10 @@ const initdb = async () =>
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => {
+export const putDB = async (content) => {
   console.log('put in new message in db')
-  console.error('putDb not implemented');
-  const contentAdd = await openDb('jate', 1);
+  console.error('putDB not implemented');
+  const contentAdd = await openDB('jate', 1);
   const message = contentAdd.transaction('jate', 'readwrite');
   const store = message.objectStore('jate');
   const request = store.add({ jest: content });
@@ -25,10 +25,10 @@ export const putDb = async (content) => {
 };
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => {
-  console.error('getDb not implemented');
-  console.log('get all db')
-  const allContent = await openDb('jate', 1);
+export const getDB = async () => {
+  console.error('getDB not implemented');
+  console.log('get all DB')
+  const allContent = await openDB('jate', 1);
   const message = allContent.transaction('jate', 'readwrite');
   const store = message.objectStore('jate');
   const request = store.getAll();
