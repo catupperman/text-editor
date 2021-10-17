@@ -19,13 +19,18 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Dev.to Posts',
+        title: 'jate',
         template: './index.html',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: './src-sw.js'
       }),
+      new WebpackPwaManifest ({
+        inject: true,
+        name: 'jate', 
+        description: 'text editor'
+      })
     ],
 
     module: {
