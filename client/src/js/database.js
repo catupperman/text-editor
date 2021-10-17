@@ -14,11 +14,12 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
+  console.log('put in new message in db')
   console.error('putDb not implemented');
-  const contentAdd = await putDb('jate', 1);
+  const contentAdd = await openDb('jate', 1);
   const message = contentAdd.transaction('jate', 'readwrite');
   const store = message.objectStore('jate');
-  const request = store.add({ main: content });
+  const request = store.add({ jest: content });
   const result = await request;
   console.log('added to the database', result);
 };
@@ -26,11 +27,13 @@ export const putDb = async (content) => {
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.error('getDb not implemented');
-  const allContent = await getDb('jate', 1);
-  const message = allContent.transaction('jate', 'readonly');
+  console.log('get all db')
+  const allContent = await openDb('jate', 1);
+  const message = allContent.transaction('jate', 'readwrite');
   const store = message.objectStore('jate');
   const request = store.getAll();
   const result = await request;
+  console.log('result.value', result)
   return result;
 };
 

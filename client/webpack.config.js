@@ -29,7 +29,9 @@ module.exports = () => {
       new WebpackPwaManifest ({
         inject: true,
         name: 'jate', 
-        description: 'text editor'
+        description: 'text editor',
+        start_url: '/',
+        publicPath: '/'
       })
     ],
 
