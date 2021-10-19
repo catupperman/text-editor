@@ -19,10 +19,10 @@ const pageCache = new CacheFirst({
   ],
 });
 
-// offlineFallback({
-//   urls: ['/index.html', '/'],
-//   strategy: pageCache,
-// })
+offlineFallback({
+  urls: ['/index.html', '/'],
+  strategy: pageCache,
+})
 
 warmStrategyCache({
   urls: ['/index.html', '/'],
@@ -32,18 +32,5 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
 
-
-registerRoute();
+registerRoute(pageCache);
