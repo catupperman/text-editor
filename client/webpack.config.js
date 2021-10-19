@@ -26,11 +26,11 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
-      new WebpackPwaManifest ({
+      new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'JATE', 
-        description: 'text editor',
+        name: 'JATE',
+        description: 'text editor utilizing IndexDB',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
@@ -42,9 +42,8 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
-      })
+      }), 
     ],
-
     module: {
       rules: [
         {
