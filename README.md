@@ -1,7 +1,7 @@
 <h1 align="center"> Text Editor </h1>
 
 <p align="center">
-  <img width="560" height="400" src="">
+  <img width="560" height="400" src="./img/ReadMe.jpeg">
 </p> 
 
 
@@ -43,7 +43,7 @@ Applications used to create the Fitness Tracker:
 ## Testing
 > 
 <p align="center">
-  <img width="560" height="400" src="">
+  <img width="560" height="400" src="./img/ReadMeGif.gif">
 </p> 
 
 ## License
