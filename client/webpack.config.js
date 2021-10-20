@@ -19,8 +19,8 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'JATE',
         template: './index.html',
+        title: 'JATE',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -30,6 +30,7 @@ module.exports = () => {
         fingerprints: false,
         inject: true,
         name: 'JATE',
+        short_name: 'JATE',
         description: 'text editor utilizing IndexDB',
         background_color: '#225ca3',
         theme_color: '#225ca3',
